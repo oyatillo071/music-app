@@ -53,21 +53,14 @@ const Search = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen ml-40 p-6 w-[1300px] text-white">
+    <div className="bg-gray-900 min-h-screen ml-40 pb-40 p-6 w-[1300px] text-white">
       <div className="mb-6">
         <input
           type="text"
-          placeholder="Search for a track..."
-          value={searchItem}
+          placeholder={searchItem}
           onChange={(e) => setSearchItem(e.target.value)}
           className="p-2 rounded-md bg-gray-800 text-white w-full md:w-1/2"
         />
-        <button
-          onClick={() => setIsSearch((prev) => !prev)}
-          className="ml-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-        >
-          Search
-        </button>
       </div>
       {error && (
         <p className="text-red-500">
