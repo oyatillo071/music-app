@@ -4,7 +4,7 @@ import { PlayIcon } from "@radix-ui/react-icons";
 import { setTrack } from "../store/musicSlice";
 import { fetchDeezerSearch } from "../requests/request";
 import { artistsList } from "../constants/constants";
-
+import PlayIconbutton from "../assets/playIcon.svg";
 const Search = () => {
   const [tracks, setTracks] = useState([]);
   const [error, setError] = useState(null);
@@ -106,9 +106,9 @@ const Search = () => {
                         track.title
                       );
                     }}
-                    className="bg-green-500 text-white px-4 py-2 absolute -bottom-full left-[40%] group-hover:bottom-[60%] transition-all ease-in-out duration-1000 rounded-md hover:bg-green-600"
+                    className=" absolute  top-[55%] hidden group-hover:flex transition-all ease-in-out duration-1000 rounded-md "
                   >
-                    <PlayIcon />
+                    <img src={PlayIconbutton} alt="" width={80} height={80} />
                   </button>
                 )}
               </div>
