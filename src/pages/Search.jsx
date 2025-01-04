@@ -79,10 +79,12 @@ const Search = () => {
                 <img
                   src={track.album.cover_big}
                   alt={track.title}
-                  className="w-full h-64 object-cover rounded-lg"
+                  className="w-full border-b-8 border-orange-300 h-64 object-cover rounded-lg"
                 />
                 <div className="flex-1">
-                  <p className="text-lg font-medium">{track.title}</p>
+                  <p className="text-lg font-medium line-clamp-1">
+                    {track.title}
+                  </p>
                   <p className="text-gray-400">
                     by{" "}
                     <a
@@ -106,9 +108,9 @@ const Search = () => {
                         track.title
                       );
                     }}
-                    className=" absolute  top-[55%] hidden group-hover:flex transition-all ease-in-out duration-1000 rounded-md "
+                    className="w-[150px] h-[150px] absolute  left-[70%] top-[50%] hidden group-hover:flex transition-all ease-in-out duration-1000 rounded-md "
                   >
-                    <img src={PlayIconbutton} alt="" width={80} height={80} />
+                    <img src={PlayIconbutton} alt="" width={100} height={100} />
                   </button>
                 )}
               </div>
